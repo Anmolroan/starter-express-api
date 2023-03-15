@@ -1,11 +1,36 @@
-# starter-express-api
+# IBO Core NodeJs Fastify Template
 
-This is the simplest possible nodejs api using express that responds to any request with: 
-```
-Yo!
-```
+This APP is to be used as a template while developing any NodeJS Service using Fastify Framework
 
-### Deploy it in 7 seconds: 
+Application for better compatibility needs to run with:
 
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+### Install Project Dependencies
 
+To be able to run the application properly you need to execute the
+following commands:
+
+    $ npm i
+
+### Run Console Commands
+
+In order to run your application service
+you can use any of this:
+
+Run Unit Tests:
+$ npm run test:unit
+
+To start service on your local machine you may use
+$ npm run start
+
+To run lint fixing you may use
+$ npm run link:fix
+
+## ENV variables needed to run this APP
+
+- DB_USER=postgres
+- DB_PASSWORD=mysecretpassword
+- DB_NAME=postgres
+- DB_HOST=localhost
+- DB_PORT=54320
+- NODE_ENV=dev
+- PORT=4444
