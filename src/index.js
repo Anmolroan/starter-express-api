@@ -7,7 +7,8 @@ const fastifyMetrics = require("fastify-metrics");
 
 const { envSchema: schema } = require("./app/commons/schemas/envSchemas");
 const { knexConfig } = require("../config/index");
-const routes = require("./app/enquiry/routes");
+const enquiryRoutes = require("./app/enquiry/routes");
+const lmsRoutes = require("./app/Lms/routes")
 
 // PLUGINS
 const ajv = require("./app/plugins/ajv");
@@ -52,7 +53,8 @@ function create() {
   fastify.register(swagger, SWAGGER_CONFIGS);
 
   // ROUTES
-  fastify.register(routes, { prefix: "/v1" });
+  fastify.register(enquiryRoutes, { prefix: "/v1" });
+  fastify.register(lmsRoutes, { prefix: "/v1" });
 
   // Fastify-metrics
   if (process.env.NODE_ENV !== "test") {
